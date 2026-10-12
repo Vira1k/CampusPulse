@@ -809,3 +809,26 @@
     gap: 7px;
   }
 }
+
+.sd-campus-image {
+  width: 100%;
+  height: 240px;
+  margin: 24px 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.sd-campus-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 600px) {
+  .sd-campus-image {
+    height: 170px;
+    margin: 18px 0;
+  }
+}

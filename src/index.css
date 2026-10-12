@@ -1,34 +1,37 @@
+/* Google se Inter font load kar rahe hain */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
+/* Puri website ki default styling */
 :root {
   font-family: "Inter", Arial, sans-serif;
   color: #26374c;
   background: #ffffff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Har element ka size calculate karna easy banata hai */
 * {
   box-sizing: border-box;
 }
 
+/* Puri website ke liye settings */
 html {
   min-width: 320px;
   scroll-behavior: smooth;
 }
 
+/* Website ka main body */
 body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
 }
 
+/* React ka root element */
 #root {
   min-height: 100vh;
 }
 
+/* Sabhi form elements mein same font */
 button,
 input,
 textarea,
@@ -36,14 +39,17 @@ select {
   font: inherit;
 }
 
+/* Image apne container se bahar nahi niklegi */
 img {
   max-width: 100%;
 }
 
+/* Links ka color parent element jaisa rahega */
 a {
   color: inherit;
 }
 
+/* Keyboard se button ya link select karne par outline */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
