@@ -1,20 +1,27 @@
 
 /* ==========================================
    CAMPUSPULSE - COMPLETE LANDING PAGE CSS
-   Theme: Navy Blue, Gold and Cream
+   Theme: Electric Cyan, Royal Blue & Slate Midnight
 ========================================== */
 
 :root {
-  --cp-navy: #142d4b;
-  --cp-navy-dark: #0d213b;
-  --cp-navy-light: #24476d;
-  --cp-gold: #c79b36;
-  --cp-gold-dark: #9b711c;
-  --cp-gold-pale: #f5ead1;
-  --cp-cream: #fbf9f3;
+  --cp-cyan: #06b6d4;
+  --cp-cyan-light: #22d3ee;
+  --cp-cyan-dark: #0891b2;
+  --cp-blue: #2563eb;
+  --cp-blue-dark: #1d4ed8;
+  --cp-navy: #0f172a;
+  --cp-navy-dark: #090e17;
+  --cp-navy-light: #1e293b;
+  --cp-gold: #06b6d4;
+  --cp-gold-dark: #0284c7;
+  --cp-gold-pale: #e0f2fe;
   --cp-text: #26374c;
-  --cp-muted: #697487;
-  --cp-border: #e9e5dc;
+  --cp-footer-bg: #10243d;
+  --cp-muted: #64748b;
+  --cp-border: #e2e8f0;
+  --cp-gradient: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+  --cp-gradient-hover: linear-gradient(135deg, #22d3ee 0%, #1d4ed8 100%);
 }
 
 .cp-page {
@@ -421,7 +428,7 @@
   letter-spacing: 1.6px;
 }
 
-.cp-purpose-label > span {
+.cp-purpose-label > .cp-label-bar {
   width: 27px;
   height: 3px;
   background: var(--cp-gold);

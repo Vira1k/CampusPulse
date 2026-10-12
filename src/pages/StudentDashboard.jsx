@@ -17,6 +17,8 @@ import {
   X,
   LogOut,
 } from "lucide-react";
+import Logo from "../components/Logo";
+import BackToTop from "../components/BackToTop";
 
 import "../styles/student-dashboard.css";
 
@@ -92,14 +94,9 @@ function StudentDashboard() {
   return (
     <div className="sd-page">
       <aside className={`sd-sidebar ${menuOpen ? "sd-sidebar-open" : ""}`}>
-        <Link to="/" className="sd-brand">
-          <span className="sd-brand-icon">
-            <ShieldCheck size={24} />
-          </span>
-          <span>
-            Campus<span>Pulse</span>
-          </span>
-        </Link>
+        <div className="sd-brand-wrapper">
+          <Logo size="md" />
+        </div>
 
         <p className="sd-menu-label">MAIN MENU</p>
 
@@ -128,7 +125,7 @@ function StudentDashboard() {
         <div className="sd-sidebar-bottom">
           <div className="sd-help-card">
             <div className="sd-help-icon">
-              <ShieldCheck size={21} />
+              <ShieldCheck size={22} />
             </div>
             <h3>Make a difference</h3>
             <p>Your report can help improve the campus for everyone.</p>
@@ -196,7 +193,9 @@ function StudentDashboard() {
         <div className="sd-content">
           <section className="sd-welcome">
             <div>
-              <span className="sd-eyebrow">STUDENT PORTAL</span>
+              <span className="sd-eyebrow">
+                STUDENT PORTAL
+              </span>
               <h1>Welcome back, Student!</h1>
               <p>
                 Track your complaints and help make your campus a better place.
@@ -370,6 +369,8 @@ function StudentDashboard() {
           </footer>
         </div>
       </main>
+
+      <BackToTop />
     </div>
   );
 }
