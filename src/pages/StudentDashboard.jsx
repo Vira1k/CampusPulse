@@ -17,6 +17,8 @@ import {
   X,
   LogOut,
 } from "lucide-react";
+import Logo from "../components/Logo";
+import BackToTop from "../components/BackToTop";
 
 import "../styles/student-dashboard.css";
 
@@ -30,6 +32,7 @@ function StudentDashboard() {
 
   return (
     <div className="sd-page">
+<<<<<<< HEAD
       {/* SIDEBAR */}
       <aside
         className={`sd-sidebar ${
@@ -45,6 +48,12 @@ function StudentDashboard() {
             Campus<span>Pulse</span>
           </span>
         </Link>
+=======
+      <aside className={`sd-sidebar ${menuOpen ? "sd-sidebar-open" : ""}`}>
+        <div className="sd-brand-wrapper">
+          <Logo size="md" />
+        </div>
+>>>>>>> c9f4a162d4254eac4e2245a0b93144e0f8848390
 
         <p className="sd-menu-label">MAIN MENU</p>
 
@@ -89,7 +98,7 @@ function StudentDashboard() {
         <div className="sd-sidebar-bottom">
           <div className="sd-help-card">
             <div className="sd-help-icon">
-              <ShieldCheck size={21} />
+              <ShieldCheck size={22} />
             </div>
 
             <h3>Make a difference</h3>
@@ -174,8 +183,20 @@ function StudentDashboard() {
         <div className="sd-content">
           {/* WELCOME SECTION */}
           <section className="sd-welcome">
+<<<<<<< HEAD
        <div>
         <span className="sd-eyebrow">STUDENT PORTAL</span>
+=======
+            <div>
+              <span className="sd-eyebrow">
+                STUDENT PORTAL
+              </span>
+              <h1>Welcome back, Student!</h1>
+              <p>
+                Track your complaints and help make your campus a better place.
+              </p>
+            </div>
+>>>>>>> c9f4a162d4254eac4e2245a0b93144e0f8848390
 
         <h1>Welcome back, Student!</h1>
 
@@ -525,6 +546,8 @@ function StudentDashboard() {
           </footer>
         </div>
       </main>
+
+      <BackToTop />
     </div>
   );
 }
