@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import {
   ShieldCheck,
   LayoutDashboard,
@@ -17,9 +16,8 @@ import {
   X,
   LogOut,
 } from "lucide-react";
-import Logo from "../components/Logo";
-import BackToTop from "../components/BackToTop";
 
+import BackToTop from "../components/BackToTop";
 import "../styles/student-dashboard.css";
 
 function StudentDashboard() {
@@ -32,28 +30,13 @@ function StudentDashboard() {
 
   return (
     <div className="sd-page">
-<<<<<<< HEAD
       {/* SIDEBAR */}
       <aside
-        className={`sd-sidebar ${
-          menuOpen ? "sd-sidebar-open" : ""
-        }`}
+        className={`sd-sidebar ${menuOpen ? "sd-sidebar-open" : ""}`}
       >
-        <Link to="/" className="sd-brand" onClick={closeMenu}>
-          <span className="sd-brand-icon">
-            <ShieldCheck size={24} />
-          </span>
-
-          <span>
-            Campus<span>Pulse</span>
-          </span>
-        </Link>
-=======
-      <aside className={`sd-sidebar ${menuOpen ? "sd-sidebar-open" : ""}`}>
         <div className="sd-brand-wrapper">
-          <Logo size="md" />
+          <span className="sd-logo-text">CampusPulse</span>
         </div>
->>>>>>> c9f4a162d4254eac4e2245a0b93144e0f8848390
 
         <p className="sd-menu-label">MAIN MENU</p>
 
@@ -183,42 +166,28 @@ function StudentDashboard() {
         <div className="sd-content">
           {/* WELCOME SECTION */}
           <section className="sd-welcome">
-<<<<<<< HEAD
-       <div>
-        <span className="sd-eyebrow">STUDENT PORTAL</span>
-=======
             <div>
-              <span className="sd-eyebrow">
-                STUDENT PORTAL
-              </span>
+              <span className="sd-eyebrow">STUDENT PORTAL</span>
               <h1>Welcome back, Student!</h1>
               <p>
-                Track your complaints and help make your campus a better place.
+                Track your complaints and help make your campus
+                a better place.
               </p>
             </div>
->>>>>>> c9f4a162d4254eac4e2245a0b93144e0f8848390
 
-        <h1>Welcome back, Student!</h1>
+            <Link to="/report" className="sd-primary-button">
+              <FilePlus2 size={18} />
+              Report a Problem
+              <ArrowRight size={17} />
+            </Link>
+          </section>
 
-        <p>
-          Track your complaints and help make your campus
-          a better place.
-        </p>
-      </div>
-
-      <Link to="/report" className="sd-primary-button">
-        <FilePlus2 size={18} />
-        Report a Problem
-        <ArrowRight size={17} />
-      </Link>
-    </section>
-
-    <div className="sd-campus-image">
-      <img
-        src="/campus-building.png"
-        alt="College campus"
-      />
-    </div>
+          <div className="sd-campus-image">
+            <img
+              src="/campus-building.png"
+              alt="College campus"
+            />
+          </div>
 
           {/* STATISTICS */}
           <section
@@ -228,12 +197,10 @@ function StudentDashboard() {
             <article className="sd-stat-card sd-stat-total">
               <div className="sd-stat-top">
                 <span>Total Complaints</span>
-
                 <span className="sd-stat-icon">
                   <ClipboardList size={21} />
                 </span>
               </div>
-
               <strong className="sd-stat-value">12</strong>
               <p>Complaints submitted</p>
             </article>
@@ -241,12 +208,10 @@ function StudentDashboard() {
             <article className="sd-stat-card sd-stat-pending">
               <div className="sd-stat-top">
                 <span>Pending</span>
-
                 <span className="sd-stat-icon">
                   <Clock3 size={21} />
                 </span>
               </div>
-
               <strong className="sd-stat-value">03</strong>
               <p>Awaiting action</p>
             </article>
@@ -254,12 +219,10 @@ function StudentDashboard() {
             <article className="sd-stat-card sd-stat-progress">
               <div className="sd-stat-top">
                 <span>In Progress</span>
-
                 <span className="sd-stat-icon">
                   <CircleAlert size={21} />
                 </span>
               </div>
-
               <strong className="sd-stat-value">04</strong>
               <p>Currently being handled</p>
             </article>
@@ -267,12 +230,10 @@ function StudentDashboard() {
             <article className="sd-stat-card sd-stat-resolved">
               <div className="sd-stat-top">
                 <span>Resolved</span>
-
                 <span className="sd-stat-icon">
                   <CheckCircle2 size={21} />
                 </span>
               </div>
-
               <strong className="sd-stat-value">05</strong>
               <p>Successfully completed</p>
             </article>
@@ -296,16 +257,11 @@ function StudentDashboard() {
                 <span className="sd-quick-icon sd-quick-gold">
                   <FilePlus2 size={23} />
                 </span>
-
                 <span className="sd-quick-copy">
                   <strong>Report a Problem</strong>
                   <span>Submit a new campus complaint.</span>
                 </span>
-
-                <ArrowRight
-                  size={18}
-                  className="sd-quick-arrow"
-                />
+                <ArrowRight size={18} className="sd-quick-arrow" />
               </Link>
 
               <Link
@@ -316,16 +272,11 @@ function StudentDashboard() {
                 <span className="sd-quick-icon sd-quick-blue">
                   <ClipboardList size={23} />
                 </span>
-
                 <span className="sd-quick-copy">
                   <strong>Track Complaints</strong>
                   <span>Check the status of your reports.</span>
                 </span>
-
-                <ArrowRight
-                  size={18}
-                  className="sd-quick-arrow"
-                />
+                <ArrowRight size={18} className="sd-quick-arrow" />
               </Link>
 
               <Link
@@ -336,16 +287,11 @@ function StudentDashboard() {
                 <span className="sd-quick-icon sd-quick-green">
                   <CircleUserRound size={23} />
                 </span>
-
                 <span className="sd-quick-copy">
                   <strong>My Profile</strong>
                   <span>View your student account details.</span>
                 </span>
-
-                <ArrowRight
-                  size={18}
-                  className="sd-quick-arrow"
-                />
+                <ArrowRight size={18} className="sd-quick-arrow" />
               </Link>
             </div>
           </section>
@@ -371,53 +317,22 @@ function StudentDashboard() {
 
             {/* FILTER BUTTONS */}
             <div className="sd-filter-row">
-              <button
-                type="button"
-                className={`sd-filter-button ${
-                  activeFilter === "All"
-                    ? "sd-filter-active"
-                    : ""
-                }`}
-                onClick={() => setActiveFilter("All")}
-              >
-                All
-              </button>
-
-              <button
-                type="button"
-                className={`sd-filter-button ${
-                  activeFilter === "Pending"
-                    ? "sd-filter-active"
-                    : ""
-                }`}
-                onClick={() => setActiveFilter("Pending")}
-              >
-                Pending
-              </button>
-
-              <button
-                type="button"
-                className={`sd-filter-button ${
-                  activeFilter === "In Progress"
-                    ? "sd-filter-active"
-                    : ""
-                }`}
-                onClick={() => setActiveFilter("In Progress")}
-              >
-                In Progress
-              </button>
-
-              <button
-                type="button"
-                className={`sd-filter-button ${
-                  activeFilter === "Resolved"
-                    ? "sd-filter-active"
-                    : ""
-                }`}
-                onClick={() => setActiveFilter("Resolved")}
-              >
-                Resolved
-              </button>
+              {["All", "Pending", "In Progress", "Resolved"].map(
+                (filter) => (
+                  <button
+                    key={filter}
+                    type="button"
+                    className={`sd-filter-button ${
+                      activeFilter === filter
+                        ? "sd-filter-active"
+                        : ""
+                    }`}
+                    onClick={() => setActiveFilter(filter)}
+                  >
+                    {filter}
+                  </button>
+                )
+              )}
             </div>
 
             {/* COMPLAINTS TABLE */}
@@ -438,24 +353,17 @@ function StudentDashboard() {
                     <tr>
                       <td>
                         <div className="sd-complaint-title">
-                          <strong>
-                            Broken classroom fan
-                          </strong>
+                          <strong>Broken classroom fan</strong>
                           <span>CP-1024 · Electrical</span>
                         </div>
                       </td>
-
                       <td>
                         <span className="sd-location">
                           <MapPin size={14} />
                           Block A, Room 204
                         </span>
                       </td>
-
-                      <td className="sd-date">
-                        Oct 08, 2026
-                      </td>
-
+                      <td className="sd-date">Oct 08, 2026</td>
                       <td>
                         <span className="sd-status sd-status-in-progress">
                           In Progress
@@ -469,24 +377,17 @@ function StudentDashboard() {
                     <tr>
                       <td>
                         <div className="sd-complaint-title">
-                          <strong>
-                            Water leakage near washroom
-                          </strong>
+                          <strong>Water leakage near washroom</strong>
                           <span>CP-1023 · Plumbing</span>
                         </div>
                       </td>
-
                       <td>
                         <span className="sd-location">
                           <MapPin size={14} />
                           Block B, Ground Floor
                         </span>
                       </td>
-
-                      <td className="sd-date">
-                        Oct 07, 2026
-                      </td>
-
+                      <td className="sd-date">Oct 07, 2026</td>
                       <td>
                         <span className="sd-status sd-status-pending">
                           Pending
@@ -500,24 +401,17 @@ function StudentDashboard() {
                     <tr>
                       <td>
                         <div className="sd-complaint-title">
-                          <strong>
-                            Dustbins need cleaning
-                          </strong>
+                          <strong>Dustbins need cleaning</strong>
                           <span>CP-1022 · Cleanliness</span>
                         </div>
                       </td>
-
                       <td>
                         <span className="sd-location">
                           <MapPin size={14} />
                           Central Garden
                         </span>
                       </td>
-
-                      <td className="sd-date">
-                        Oct 05, 2026
-                      </td>
-
+                      <td className="sd-date">Oct 05, 2026</td>
                       <td>
                         <span className="sd-status sd-status-resolved">
                           Resolved
@@ -539,10 +433,7 @@ function StudentDashboard() {
             <span>
               © {new Date().getFullYear()} CampusPulse
             </span>
-
-            <span>
-              Building a better campus, together.
-            </span>
+            <span>Building a better campus, together.</span>
           </footer>
         </div>
       </main>

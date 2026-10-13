@@ -1,41 +1,36 @@
-<<<<<<< HEAD
-/* Google se Inter font load kar rahe hain */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-=======
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
->>>>>>> c9f4a162d4254eac4e2245a0b93144e0f8848390
 
-/* Puri website ki default styling */
+/* Global Settings */
 :root {
-  /* Brand Primary - Electric Cyan to Royal Blue */
   --cp-cyan: #06b6d4;
   --cp-cyan-light: #22d3ee;
   --cp-cyan-dark: #0891b2;
   --cp-cyan-pale: #e0f2fe;
-  
+
   --cp-blue: #2563eb;
   --cp-blue-light: #3b82f6;
   --cp-blue-dark: #1d4ed8;
   --cp-blue-deep: #1e3a8a;
 
-  /* Theme Navy & Preserved Original Footer/Font Colors */
   --cp-navy: #142d4b;
   --cp-navy-dark: #0d213b;
   --cp-navy-light: #24476d;
   --cp-footer-bg: #10243d;
 
-  /* Backward compatibility mapping with enhanced palette */
   --cp-gold: #06b6d4;
   --cp-gold-dark: #0284c7;
   --cp-gold-pale: #e0f2fe;
   --cp-cream: #fbf9f3;
 
-  /* Gradients */
   --cp-gradient: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
   --cp-gradient-hover: linear-gradient(135deg, #22d3ee 0%, #1d4ed8 100%);
-  --cp-gradient-subtle: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(37, 99, 235, 0.08) 100%);
+  --cp-gradient-subtle: linear-gradient(
+    135deg,
+    rgba(6, 182, 212, 0.12) 0%,
+    rgba(37, 99, 235, 0.08) 100%
+  );
 
-  /* Neutrals & Font Colors (Preserved #26374c) */
   --cp-text: #26374c;
   --cp-text-muted: #64748b;
   --cp-muted: #697487;
@@ -44,35 +39,40 @@
   --cp-bg: #ffffff;
   --cp-bg-alt: #f8fafc;
 
-  /* Status Colors */
   --cp-pending: #f59e0b;
   --cp-progress: #0284c7;
   --cp-resolved: #10b981;
 
-  /* Shadows & Glow */
   --cp-glow: 0 0 20px rgba(6, 182, 212, 0.35);
   --cp-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
-  --cp-shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
-  --cp-shadow-lg: 0 16px 36px -6px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(6, 182, 212, 0.12);
-  --cp-shadow-hover: 0 20px 40px -8px rgba(6, 182, 212, 0.25), 0 6px 16px -2px rgba(37, 99, 235, 0.2);
+  --cp-shadow-md:
+    0 8px 24px -4px rgba(15, 23, 42, 0.08),
+    0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --cp-shadow-lg:
+    0 16px 36px -6px rgba(15, 23, 42, 0.12),
+    0 4px 12px -2px rgba(6, 182, 212, 0.12);
+  --cp-shadow-hover:
+    0 20px 40px -8px rgba(6, 182, 212, 0.25),
+    0 6px 16px -2px rgba(37, 99, 235, 0.2);
 
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
   color: #26374c;
   background: #ffffff;
 }
 
-/* Har element ka size calculate karna easy banata hai */
+/* Box sizing */
 * {
   box-sizing: border-box;
 }
 
-/* Puri website ke liye settings */
+/* HTML settings */
 html {
   min-width: 320px;
   scroll-behavior: smooth;
 }
 
-/* Website ka main body */
+/* Body settings */
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -81,12 +81,12 @@ body {
   color: #26374c;
 }
 
-/* React ka root element */
+/* React root */
 #root {
   min-height: 100vh;
 }
 
-/* Sabhi form elements mein same font */
+/* Form elements */
 button,
 input,
 textarea,
@@ -94,18 +94,18 @@ select {
   font: inherit;
 }
 
-/* Image apne container se bahar nahi niklegi */
+/* Images */
 img {
   max-width: 100%;
 }
 
-/* Links ka color parent element jaisa rahega */
+/* Links */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Keyboard se button ya link select karne par outline */
+/* Keyboard focus */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -115,10 +115,7 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
-/* ==========================================
-   GLOBAL BRAND LOGO COMPONENT STYLES
-   Completely transparent, NO background box
-========================================== */
+/* Global Brand Logo Styles */
 .cp-brand-link {
   display: inline-flex;
   text-decoration: none;
@@ -175,12 +172,29 @@ textarea:focus-visible {
   gap: 1px;
 }
 
-.cp-brand-title.text-sm { font-size: 15px; }
-.cp-brand-title.text-base { font-size: 17px; }
-.cp-brand-title.text-lg { font-size: 20px; }
-.cp-brand-title.text-xl { font-size: 23px; }
-.cp-brand-title.text-2xl { font-size: 26px; }
-.cp-brand-title.text-3xl { font-size: 30px; }
+.cp-brand-title.text-sm {
+  font-size: 15px;
+}
+
+.cp-brand-title.text-base {
+  font-size: 17px;
+}
+
+.cp-brand-title.text-lg {
+  font-size: 20px;
+}
+
+.cp-brand-title.text-xl {
+  font-size: 23px;
+}
+
+.cp-brand-title.text-2xl {
+  font-size: 26px;
+}
+
+.cp-brand-title.text-3xl {
+  font-size: 30px;
+}
 
 .cp-brand-pulse {
   background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
@@ -192,7 +206,7 @@ textarea:focus-visible {
   margin-left: 2px;
 }
 
-/* Dark variant (Footer, dark hero, etc.) */
+/* Dark variant */
 .cp-brand-dark .cp-brand-title {
   color: #ffffff;
 }

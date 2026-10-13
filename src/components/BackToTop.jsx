@@ -1,46 +1,53 @@
-import { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
-import "../styles/back-to-top.css";
 
 export default function BackToTop() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 280) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    function handleScroll() {
+      setVisible(window.scrollY > 300);
+    }
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  if (!visible) return null;
 
   return (
     <button
       type="button"
-      className={`cp-back-to-top ${isVisible ? "cp-back-to-top-visible" : ""}`}
-      onClick={scrollToTop}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      aria-label="Scroll back to top"
+      onClick={() =>
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      }
+      aria-label="Back to top"
       title="Back to top"
+      style={{
+        position: "fixed",
+        right: "24px",
+        bottom: "24px",
+        zIndex: 1000,
+        width: "44px",
+        height: "44px",
+        border: "none",
+        borderRadius: "50%",
+        backgroundColor: "#142b4a",
+        color: "#ffffff",
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+      }}
     >
-      <span className="cp-back-to-top-glow" />
-      <span className="cp-back-to-top-icon-wrap">
-        <ArrowUp size={20} className="cp-back-to-top-icon" />
-      </span>
-      {isHovered && <span className="cp-back-to-top-tooltip">Back to top</span>}
+      <ArrowUp size={20} />
     </button>
   );
 }

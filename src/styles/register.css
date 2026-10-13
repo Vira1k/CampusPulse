@@ -1,10 +1,126 @@
-/* ==========================================
-   REGISTER PAGE STYLES
-   CampusPulse Cyan & Royal Blue Theme
-========================================== */
 
-@import "./login.css";
+/* Page background */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: #fbf9f3;
+  font-family: Arial, sans-serif;
+}
 
-.auth-card {
-  max-width: 500px;
+/* Registration card */
+.register-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  background: white;
+  border: 1px solid #e9e5dc;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px #142d4b15;
+}
+
+/* Logo */
+.register-logo {
+  display: block;
+  margin-bottom: 25px;
+  color: #142d4b;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.register-logo span {
+  color: #c79b36;
+}
+
+/* Heading */
+.register-card h1 {
+  margin-bottom: 10px;
+  color: #142d4b;
+  text-align: center;
+}
+
+.register-description {
+  margin-bottom: 25px;
+  color: #697487;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Form */
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-card label {
+  color: #142d4b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.register-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+  outline: none;
+}
+
+.register-card input:focus {
+  border-color: #c79b36;
+  box-shadow: 0 0 0 3px #c79b3620;
+}
+
+/* Submit button */
+.register-card button {
+  margin-top: 12px;
+  padding: 14px;
+  color: white;
+  background: #142d4b;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-card button:hover {
+  background: #24476d;
+}
+
+/* Links */
+.register-login {
+  margin-top: 22px;
+  color: #697487;
+  font-size: 13px;
+  text-align: center;
+}
+
+.register-login a {
+  color: #9b711c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-back {
+  display: block;
+  margin-top: 18px;
+  color: #142d4b;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Mobile screen */
+@media (max-width: 450px) {
+  .register-card {
+    padding: 25px 20px;
+  }
 }

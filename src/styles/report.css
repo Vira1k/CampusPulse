@@ -1,0 +1,263 @@
+
+.cp-page {
+  min-height: 100vh;
+  padding: 40px 24px;
+  background: #fbf9f3;
+  color: #142d4b;
+  box-sizing: border-box;
+}
+
+.cp-page-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 34px;
+  background: #fff;
+  border: 1px solid #e8e1d2;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(20, 45, 75, 0.07);
+}
+
+.cp-wide {
+  max-width: 1050px;
+}
+
+.cp-back-link,
+.cp-bottom-link {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #142d4b;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cp-back-link:hover,
+.cp-bottom-link:hover {
+  color: #9b711c;
+}
+
+.cp-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #9b711c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.cp-page h1 {
+  margin: 0 0 10px;
+  color: #142d4b;
+  font-size: 30px;
+}
+
+.cp-description {
+  margin: 0 0 28px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cp-form label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #142d4b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cp-form input,
+.cp-form select,
+.cp-form textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  color: #142d4b;
+  background: #fff;
+  border: 1px solid #d9e0e8;
+  border-radius: 9px;
+  box-sizing: border-box;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cp-form input:focus,
+.cp-form select:focus,
+.cp-form textarea:focus {
+  border-color: #c79b36;
+  box-shadow: 0 0 0 3px rgba(199, 155, 54, 0.15);
+}
+
+.cp-form textarea {
+  resize: vertical;
+}
+
+.cp-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 13px 20px;
+  color: #fff;
+  background: #142d4b;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cp-submit-button:hover {
+  background: #24476d;
+  transform: translateY(-1px);
+}
+
+.cp-button-link {
+  margin-top: 12px;
+}
+
+.cp-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 30px 0 18px;
+}
+
+.cp-list-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.cp-secondary-button {
+  padding: 10px 16px;
+  color: #142d4b;
+  background: #f5ead1;
+  border: 1px solid #e8d5a7;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cp-secondary-button:hover {
+  background: #efdfb9;
+}
+
+.cp-empty-state {
+  padding: 32px 20px;
+  text-align: center;
+  background: #fffdf8;
+  border: 1px dashed #d9c99f;
+  border-radius: 14px;
+}
+
+.cp-empty-state h3 {
+  margin-top: 0;
+}
+
+.cp-empty-state p {
+  color: #64748b;
+}
+
+.cp-complaint-list {
+  display: grid;
+  gap: 16px;
+}
+
+.cp-complaint-card {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #c79b36;
+  border-radius: 12px;
+}
+
+.cp-complaint-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.cp-complaint-id {
+  color: #9b711c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cp-complaint-card h3 {
+  margin: 7px 0 10px;
+  color: #142d4b;
+  font-size: 18px;
+}
+
+.cp-complaint-card p {
+  color: #64748b;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.cp-status {
+  padding: 7px 11px;
+  color: #946317;
+  background: #fff3d9;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.cp-complaint-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 18px;
+  padding-top: 15px;
+  color: #64748b;
+  border-top: 1px solid #edf0f4;
+  font-size: 12px;
+}
+
+.cp-profile-avatar {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  margin: 25px 0;
+  place-items: center;
+  color: #142d4b;
+  background: #f5ead1;
+  border: 2px solid #e8d5a7;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .cp-page {
+    padding: 20px 12px;
+  }
+
+  .cp-page-container {
+    padding: 22px 17px;
+    border-radius: 13px;
+  }
+
+  .cp-page h1 {
+    font-size: 25px;
+  }
+
+  .cp-complaint-card {
+    padding: 16px;
+  }
+
+  .cp-complaint-top {
+    flex-direction: column;
+  }
+
+  .cp-list-heading h2 {
+    font-size: 17px;
+  }
+}
